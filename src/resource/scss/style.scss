@@ -1,0 +1,57 @@
+@mixin border_ {
+    border: thin solid #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Special Elite', cursive;
+}
+
+body {
+    // padding: 0 10px;
+}
+
+.header, .footer {
+    width: auto;
+    height: 60px; 
+    background: blue; 
+
+    padding: 0 60px;
+
+    .header-logo, .header-functions {
+        position: relative;
+        top: 5px;
+    }
+
+    .header-logo {
+        @include border_();
+
+        display: block;
+        float: left;
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50%;
+    }
+
+    .header-functions {
+        display: block;
+        margin: 0 auto;
+        float: right;
+
+        div {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+
+            @include border_();
+            border-radius: 50%;
+        }
+    }
+}
+
+.footer {
+
+}
